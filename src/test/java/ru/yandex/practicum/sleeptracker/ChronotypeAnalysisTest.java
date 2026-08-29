@@ -13,7 +13,7 @@ class ChronotypeAnalysisTest {
             new ChronotypeAnalysis();
 
     @Test
-    void shouldDetermineOwl() {
+    void owl() {
 
         SleepingSession session = new SleepingSession(
                 LocalDateTime.of(2025, 10, 1, 23, 30),
@@ -31,7 +31,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldDetermineLark() {
+    void lark() {
 
         SleepingSession session = new SleepingSession(
                 LocalDateTime.of(2025, 10, 1, 21, 30),
@@ -49,7 +49,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldDeterminePigeon() {
+    void pigeon() {
 
         SleepingSession session = new SleepingSession(
                 LocalDateTime.of(2025, 10, 1, 22, 30),
@@ -67,7 +67,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldIgnoreDaytimeSleep() {
+    void daytimeSleep() {
 
         SleepingSession daytimeSession =
                 new SleepingSession(
@@ -90,7 +90,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldChoosePigeonWhenChronotypesAreEqual() {
+    void tie() {
 
         SleepingSession owlSession =
                 new SleepingSession(
@@ -129,7 +129,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldDetermineChronotypeUsingMostFrequentType() {
+    void mostFrequent() {
 
         SleepingSession firstPigeon =
                 new SleepingSession(
@@ -180,7 +180,7 @@ class ChronotypeAnalysisTest {
     }
 
     @Test
-    void shouldTreatBoundaryValuesAsPigeon() {
+    void boundaries() {
 
         SleepingSession session =
                 new SleepingSession(
